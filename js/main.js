@@ -20,8 +20,8 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
+    let selectedRoast = roastSelection.value;
+    let filteredCoffees = [];
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
@@ -55,3 +55,15 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+/*
+functionality*/
+
+function imgSlider(anything){
+  document.querySelector('.starbucks').src = anything;
+}
+function changeCircleColor(color){
+  const  circle = document.querySelector('.circle');
+  circle.style.background = color;
+}
+
